@@ -1,0 +1,45 @@
+- name: Gaming activity is a free lottery, meets criteria
+  period: 2019-09
+  input:
+    gaming_activity_is_free_lottery: True
+    gaming_activity_is_progressive_lottery: False
+    total_prize_value_of_all_prizes_from_gaming_activity: 10000
+    ticket_cost: 0
+  output:
+    free_lottery__game_meets_criteria: True
+- name: Gaming activity is not a free lottery, does not meet criteria
+  period: 2019-09
+  input:
+    gaming_activity_is_free_lottery: False
+    gaming_activity_is_progressive_lottery: False
+    total_prize_value_of_all_prizes_from_gaming_activity: 10000
+    ticket_cost: 0
+  output:
+    free_lottery__game_meets_criteria: False
+- name: Gaming activity is a progressive lottery, does not meet criteria
+  period: 2019-09
+  input:
+    gaming_activity_is_free_lottery: True
+    gaming_activity_is_progressive_lottery: True
+    total_prize_value_of_all_prizes_from_gaming_activity: 10000
+    ticket_cost: 0
+  output:
+    free_lottery__game_meets_criteria: False
+- name: Total prize value exceeds permissible limit, does not meet criteria
+  period: 2019-09
+  input:
+    gaming_activity_is_free_lottery: True
+    gaming_activity_is_progressive_lottery: False
+    total_prize_value_of_all_prizes_from_gaming_activity: 11000
+    ticket_cost: 0
+  output:
+    free_lottery__game_meets_criteria: False
+- name: Ticket is not free, does not meet criteria
+  period: 2019-09
+  input:
+    gaming_activity_is_free_lottery: True
+    gaming_activity_is_progressive_lottery: False
+    total_prize_value_of_all_prizes_from_gaming_activity: 10000
+    ticket_cost: 1
+  output:
+    free_lottery__game_meets_criteria: False
