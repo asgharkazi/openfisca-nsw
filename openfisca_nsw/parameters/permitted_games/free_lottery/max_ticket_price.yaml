@@ -1,6 +1,5 @@
 description: Maximum ticket price limit for the gaming competition
-reference: >
-  Community Gaming Regulation 2019
+reference: Community Gaming Regulation 2019
 values:
   2019-09-01:
     value: 0

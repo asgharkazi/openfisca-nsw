@@ -10,7 +10,7 @@ from openfisca_core.model_api import *
 from openfisca_nsw.entities import *
 
 
-# This is used to calculate whether an organisation is permitted to conduct a guessing games
+# This is used to calculate whether an organisation is permitted to conduct a free lottery
 class free_lottery__game_meets_criteria(Variable):
     value_type = bool
     entity = Organisation
